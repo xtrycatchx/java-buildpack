@@ -37,6 +37,11 @@ module JavaBuildpack
         write_client credentials['client']
         write_servers credentials['servers']
         write_configuration credentials['servers'], credentials['groups']
+        
+        print("SYDNEY LOG START")
+        print(@droplet.sandbox)
+        print("SYDNEY LOG ENDS")
+        
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
